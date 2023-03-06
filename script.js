@@ -1,14 +1,19 @@
 // Your code here
-const drawingBoard = document.getElementById("theTable")
-const square = document.getElementsByTagName('td')[0]
-const row = document.createElement("tr")
+const drawingBoard = document.getElementsByTagName('table')[0]
+// const cell = document.createElement('td')
 
-function makeRow(num) {
-    for (let i=0; i<num; i++){
-        drawingBoard.appendChild(row)
-        for (let i=0; i<20; i++){
-            row.appendChild(square)
-        }
+function makeRow(){
+    const row = document.createElement("tr")
+
+    for (let square=0; square < 20; square++){
+        let square = document.createElement('td')
+
+        row.appendChild(square)
     }
+    drawingBoard.appendChild(row)
 }
-makeRow(5)
+makeRow()
+makeRow()
+makeRow()
+makeRow()
+makeRow()
